@@ -8,7 +8,7 @@
 }
 
 body{
-    background-color: aquamarine;
+    background-color: lightgrey;
 }
 
 .form{
@@ -39,19 +39,19 @@ form input{
 
 button{
     font-size: 1rem;
-    margin-top: 1.8;
+    margin-top: 8px;
     padding: 10px 0;
     border-radius: 20px;
     outline: none;
     border: none;
-    width: 90%;
+    width: 60%;
     color: #fff;
     cursor: pointer;
-    background: blue;
+    background: rgb(48, 127, 230);
 }
 
 button:hover{
-    background: yellow;
+    background-color: rgb(0, 174, 255); 
 }
 
 input:focus{
@@ -85,15 +85,15 @@ input:focus{
 }
 
 .member a{
-    color: green;
+    color: black;
     text-decoration: none;
+    font-weight: bolder;
 }
 
 
 /* Sign In Page */
 
 .recover{
-    text-align: right;
     font-size: 0.7rem;
     margin: 0.3rem 1.4rem 0 0;
 }
@@ -101,6 +101,7 @@ input:focus{
 .recover a{
     text-decoration: none;
     color: #464647;
+    margin-left: 30px;
 }
 
 
