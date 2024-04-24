@@ -88,3 +88,19 @@ input:focus{
     color: green;
     text-decoration: none;
 }
+
+
+/* Sign In Page */
+
+.recover{
+    text-align: right;
+    font-size: 0.7rem;
+    margin: 0.3rem 1.4rem 0 0;
+}
+
+.recover a{
+    text-decoration: none;
+    color: #464647;
+}
+
+
