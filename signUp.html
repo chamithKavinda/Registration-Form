@@ -10,22 +10,84 @@
 <body>
     <div class="form">
         <h1>Sign Up</h1>
-        <form action="#">
-            <input type="text" placeholder="Username">
-            <input type="text" placeholder="E-mail">
-            <input type="password" placeholder="Password">
-            <input type="password" placeholder="Re-Enter-Password">
+        <form action="#" id="registrationForm">
+            <input id="Username" type="text" placeholder="Username">
+            <span class="error" id="Username-error"></span>
+
+            <input id="Email" type="email" placeholder="E-mail">
+            <span class="error" id="Email-error"></span>
+
+            <input id="Password" type="password" placeholder="Password">
+            <span class="error" id="Password-error"></span>
+
+            <input id="Repassword" type="password" placeholder="Re-Enter-Password">
+            <span class="error" id="Repassword-error"></span>
+            
+            <div class="terms">
+                <input type="checkbox" id="checkbox">
+                <label for="checkbox">I agree to these <a href="#">Terms & Conditions</a></label>
+            </div>
+            
+            <div class="member">
+                Already have an account? <a href="./signIn.html">
+                    Sign In
+                </a>
+            </div>
+
+            <button id="btn" type="submit">Sign Up</button>
         </form>
-        <div class="terms">
-            <input type="checkbox" id="checkbox">
-            <label for="checkbox">I agree to these <a href="#">Terms & Conditions</a></label>
-        </div>
-        <button>Sign Up</button>
-        <div class="member">
-            Already have an account? <a href="./signIn.html">
-                Sign In
-            </a>
-        </div>
+        
     </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#registrationForm').submit(function(event){
+                event.preventDefault();
+                if(validateForm()){
+                    alert('submited successfully')
+                }
+                
+            });
+        });
+
+        function validateForm(){
+            let Username = $('#Username').val();
+            let Email = $('#Email').val();
+            let Password = $('#Password').val();
+            let Repassword = $('#Repassword').val();
+            isValid = true;
+
+            if (Username === null || Username === ""){
+                $("#Username-error").text('please enter Username correctly');
+                isValid = false;
+            }else{
+                $("#Username-error").text('');
+            }
+
+            if (Email === null || Email === ""){
+                $("#Email-error").text('please enter Eamil correctly');
+                isValid = false;
+            }else{
+                $("#Email-error").text('');
+            }
+
+            if (Password === null || Password === ""){
+                $("#Password-error").text('please enter Password correctly');
+                isValid = false;
+            } else{
+                $("#Password-error").text('');
+            }
+
+            if (Repassword === null || Repassword === ""){
+                $("#Repassword-error").text('please enter RePassword correctly');
+                isValid = false;
+            }else{
+                $("#Repassword-error").text('');
+            }
+
+            return isValid;
+        }
+    </script>
 </body>
 </html>

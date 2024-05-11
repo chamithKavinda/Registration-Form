@@ -21,6 +21,11 @@ body{
     box-shadow: black;
 }
 
+.error{
+    color: red;
+    margin-top: 2px;
+}
+
 h1{
     font-size: 2rem;
     color: #07001f;
